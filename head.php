@@ -3,28 +3,22 @@ include "funcoes.php";
 
 $usuario = logarUsuario("Mosca", 0);
 
+// A função file_get_contents() é utilizada para leitura de um arquivo
+// inteiro em uma string.
+// Funciona como uma espécie de de atalho se comparado a sequência
+// de comandos: fopen -> fread -> fclose
+$jsonProdutos = file_get_contents("Produtos.json");
+
 // $logado = false;
-$produtos = [
-    "produto1" => ["nome"=>"Curso Fullstack",
-                  "descricao"=>"O curso Fullstack ensina programação",
-                  "preco"=> 1200,
-                  "img"=> "image/prod-1.jpg"],
-    "produto2" => ["nome"=>"Curso Android",
-                  "descricao"=>"O curso Android ensina a criação de Apps",
-                  "preco"=> 1400,
-                  "img"=> "image/prod-2.jpg"],              
-    "produto3" => ["nome"=>"MKT Digital",
-                  "descricao"=>"O curso MKT Digital apresenta princípios básicos de Marketing",
-                  "preco"=> 1700,
-                  "img"=> "image/prod-3.jpg"],          
-    "produto4" => ["nome"=>"Mídias Digitais",
-                    "descricao"=>"O curso Mídias Digitais discute aspectos mercadológicos do uso de mídias digitais",
-                    "preco"=> 1700,
-                    "img"=> "image/prod-4.jpg"]           
 
-];
+// json_decode(), transforma um JSON em um objeto contendo um array associativo.
+$produtos = json_decode($jsonProdutos, true);
 
-$produtos = addProduto("Curso UX","descrição",2000,"image/prod-5.jpg",$produtos);
+//este comando "entra" dentro do Produtos definido no Json
+$produtos = $produtos["Produtos"];
+
+
+addProduto("Curso UX","descrição",2000,"image/prod-5.jpg");
 
 ?>
 <head>
