@@ -18,7 +18,7 @@ $produtos = json_decode($jsonProdutos, true);
 $produtos = $produtos["Produtos"];
 
 
-addProduto("Curso UX","descrição",2000,"image/prod-5.jpg");
+// addProduto("Curso UX","descrição",2000,"image/prod-5.jpg");
 
 ?>
 <head>
