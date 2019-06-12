@@ -1,10 +1,10 @@
 
 <?php 
-     
+    session_start();
     
     function logarUsuario($nome, $nivelAcesso){
         $usuario = ["logado"=>true,"nome"=>$nome,"nivelAcesso"=>$nivelAcesso];
-        return $usuario;
+        $_SESSION['usuario'] = $usuario;
     }
 
     function addProduto($nome, $descricao, $preco, $img){

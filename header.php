@@ -24,7 +24,7 @@
             <?php endif; ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Olá <?php echo $usuario["nome"]; ?></a>
+                <a class="nav-link" href="#">Olá <?php echo $usuario['nome']; ?></a>
             </li>
 
         <?php else: ?>

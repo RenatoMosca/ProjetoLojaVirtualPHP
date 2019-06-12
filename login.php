@@ -19,7 +19,7 @@
                 <label for="senhaUsuario">Senha</label>
                 <input type="password" step="any" class="form-control" id="senhaUsuario" placeholder="digite a senha do Usuario" name="senhaUsuario">
             </div>
-            <a href="cadastroUsuario.php" class="btn btn-primary">Cadastre-s</a> <button class="btn btn-success" type="submit">Logar</button>
+            <a href="cadastroUsuario.php" class="btn btn-primary">Cadastre-se</a> <button class="btn btn-success" type="submit">Logar</button>
             </form>
         </div>
     </section>

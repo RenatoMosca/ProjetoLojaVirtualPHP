@@ -1,7 +1,7 @@
 <?php 
 include "funcoes.php";
 
-$usuario = logarUsuario("Mosca", 0);
+$usuario = isset($_SESSION['usuario'])?$_SESSION['usuario']:"";
 
 // A função file_get_contents() é utilizada para leitura de um arquivo
 // inteiro em uma string.
